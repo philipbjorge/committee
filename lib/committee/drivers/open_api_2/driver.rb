@@ -156,6 +156,7 @@ module Committee
 
             methods.each do |method, link_data|
               method = method.upcase
+              next unless method == "GET"
 
               link = Link.new
               link.enc_type = schema.consumes
